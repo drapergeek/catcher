@@ -8,6 +8,9 @@ This repository comes equipped with a self-setup script:
 
     % ./bin/setup
 
+After the setup script, be sure to fill in the API token information for trello
+in the ENV file.
+
 After setting up, you can run the application using [foreman]:
 
     % foreman start
