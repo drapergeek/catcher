@@ -12,6 +12,8 @@ After setting up, you can run the application using [foreman]:
 
     % foreman start
 
+Open the app from http://catcher.dev or http://localhost:7010
+
 [foreman]: http://ddollar.github.io/foreman/
 
 Guidelines

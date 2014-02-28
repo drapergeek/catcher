@@ -10,7 +10,7 @@ set -e
 bundle install
 
 # Set up the database
-bundle exec rake db:setup
+bundle exec rake db:setup db:migrate db:test:prepare
 
 # Add binstubs to PATH via export PATH=".git/safe/../../bin:$PATH" in ~/.zshenv
 mkdir -p .git/safe
@@ -21,12 +21,12 @@ if [ ! -f .env ]; then
 fi
 
 # Pick a port for Foreman
-echo "port: 7000" > .foreman
+echo "port: 7010" > .foreman
 
 # Set up DNS via Pow
 if [ -d ~/.pow ]
 then
-  echo 7000 > ~/.pow/`basename $PWD`
+  echo 7010 > ~/.pow/`basename $PWD`
 else
   echo "Pow not set up but the team uses it for this project. Setup: http://goo.gl/RaDPO"
 fi
